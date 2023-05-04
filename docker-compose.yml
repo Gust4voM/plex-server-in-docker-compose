@@ -26,9 +26,9 @@ services:
 
     volumes:
 
-      - /home/gustavo/Plex/config:/config
+      - ./config:/config
 
-      - /home/gustavo/Plex/downloads:/downloads
+      - ./downloads:/downloads
 
     restart: unless-stopped
 
@@ -54,11 +54,11 @@ services:
 
     volumes:
 
-      - /home/gustavo/Plex/config:/config
+      - ./config:/config
 
-      - /home/gustavo/Plex/tv:/tv
+      - ./tv:/tv
 
-      - /home/gustavo/Plex/movies:/movies
+      - ./movies:/movies
 
     restart: unless-stopped
 
@@ -84,15 +84,15 @@ services:
 
     volumes:
 
-      - /home/gustavo/Plex/config:/config
+      - ./config:/config
 
-      - /home/gustavo/Plex/tv:/tv
+      - ./tv:/tv
 
-      - /home/gustavo/Plex/movies:/movies
+      - ./movies:/movies
 
-      - /home/gustavo/Plex/downloads/complete:/downloads/complete
+      - ./downloads/complete:/downloads/complete
 
-      - /home/gustavo/Plex/downloads:/downloads
+      - ./downloads:/downloads
 
     restart: unless-stopped
 
@@ -122,12 +122,12 @@ services:
 
     volumes:
 
-      - /home/gustavo/Plex/config:/config
+      - ./config:/config
 
-      - /home/gustavo/Plex/downloads/complete:/downloads/complete
+      - ./downloads/complete:/downloads/complete
 
-      - /home/gustavo/Plex/downloads:/downloads
+      - ./downloads:/downloads
 
-      - /home/gustavo/Plex/watch:/watch
+      - ./watch:/watch
 
     restart: unless-stopped
