@@ -1,16 +1,16 @@
 # PLEX server
-##Radarr
+## Radarr
 
 Aca configuramos todo, ver el dockerfile por el puerto al que acceder, ahi configuramos indexadores, cliente de descarga y media server
 
-##Plex
+## Plex
 
 El media server en si
 
-##Jackett
+## Jackett
 
 Nuestros indexadores, nos da el output que necesitamos para configurarlo en Radarr
 
-##Transmission
+## Transmission
 
 Descarga torrents 
