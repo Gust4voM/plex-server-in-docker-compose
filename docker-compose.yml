@@ -1,133 +1,62 @@
 version: '3'
-
-
-
 services:
-
-
-
   jackett:
-
     image: lscr.io/linuxserver/jackett:latest
-
     container_name: jackett
-
     environment:
-
       - PUID=1000
-
       - PGID=1000
-
       - TZ=Etc/UTC
-
     ports:
-
       - 9117:9117
-
     volumes:
-
       - ./config:/config
-
       - ./downloads:/downloads
-
     restart: unless-stopped
-
-
-
   plex:
-
     image: lscr.io/linuxserver/plex:latest
-
     container_name: plex
-
     network_mode: "host"
-
     environment:
-
       - PUID=1000
-
       - PGID=1000
-
       - TZ=Etc/UTC
-
       - VERSION=docker
-
     volumes:
-
       - ./config:/config
-
       - ./tv:/tv
-
       - ./movies:/movies
-
     restart: unless-stopped
-
-
-
   radarr:
-
     image: lscr.io/linuxserver/radarr:latest
-
     container_name: radarr
-
     environment:
-
       - PUID=1000
-
       - PGID=1000
-
       - TZ=Etc/UTC
-
     ports:
-
       - 7878:7878
-
     volumes:
-
       - ./config:/config
-
       - ./tv:/tv
-
       - ./movies:/movies
-
       - ./downloads/complete:/downloads/complete
-
       - ./downloads:/downloads
-
     restart: unless-stopped
-
-
-
   transmission:
-
     image: lscr.io/linuxserver/transmission:latest
-
     container_name: transmission
-
     environment:
-
       - PUID=1000
-
       - PGID=1000
-
       - TZ=America/Argentina/Buenos_Aires
-
     ports:
-
       - 9091:9091
-
       - 51413:51413
-
       - 51413:51413/udp
-
     volumes:
-
       - ./config:/config
-
       - ./downloads/complete:/downloads/complete
-
       - ./downloads:/downloads
-
       - ./watch:/watch
-
     restart: unless-stopped
