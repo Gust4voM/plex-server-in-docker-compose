@@ -23,6 +23,8 @@ services:
       - TZ=Etc/UTC
       - VERSION=docker
     volumes:
+      - ./downloads/complete:/downloads/complete
+      - ./downloads:/downloads
       - ./config:/config
       - ./tv:/tv
       - ./movies:/movies
