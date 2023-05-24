@@ -62,3 +62,11 @@ services:
       - ./downloads:/downloads
       - ./watch:/watch
     restart: unless-stopped
+  duckdns:
+    image: linuxserver/duckdns
+    container_name: duckdns
+    environment:
+      - SUBDOMAINS=l-j-01,l-p-01,l-r-01,l-t-01
+      - TOKEN=f52db598-228a-4509-8563-3b2de65d8162
+      - TZ=America/Argentina/Buenos_Aires
+    restart: unless-stopped
