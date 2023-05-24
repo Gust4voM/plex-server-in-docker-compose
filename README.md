@@ -14,3 +14,7 @@ Nuestros indexadores, nos da el output que necesitamos para configurarlo en Rada
 ## Transmission
 
 Descarga torrents 
+
+## Duck DNS
+
+Para evitar el cambio constante en la configuracion de Radarr, resolvemos por nombre DNS
