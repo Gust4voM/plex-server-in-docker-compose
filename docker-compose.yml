@@ -66,6 +66,8 @@ services:
     image: linuxserver/duckdns
     container_name: duckdns
     environment:
+      - PUID=1000
+      - PGID=1000
       - SUBDOMAINS=l-j-01,l-p-01,l-r-01,l-t-01
       - TOKEN=f52db598-228a-4509-8563-3b2de65d8162
       - TZ=America/Argentina/Buenos_Aires
