@@ -4,7 +4,7 @@ services:
     image: lscr.io/linuxserver/jackett:latest
     container_name: jackett
     environment:
-      - JACKETT_WEBUI_BASEURL=http://l-j-01.duckdns.org/
+#      - JACKETT_WEBUI_BASEURL=http://l-j-01.duckdns.org/
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
@@ -19,7 +19,7 @@ services:
     container_name: plex
     network_mode: "host"
     environment:
-      - ADVERTISE_IP=http://l-p-01.duckdns.org/
+#      - ADVERTISE_IP=http://l-p-01.duckdns.org/
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
@@ -35,7 +35,7 @@ services:
     image: lscr.io/linuxserver/radarr:latest
     container_name: radarr
     environment:
-      - URL_BASE=http://l-r-01.duckdns.org/
+#      - URL_BASE=http://l-r-01.duckdns.org/
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
@@ -52,7 +52,7 @@ services:
     image: lscr.io/linuxserver/transmission:latest
     container_name: transmission
     environment:
-      - TRANSMISSION_WEB_UI=l-t-01.duckdns.org
+#     - TRANSMISSION_WEB_UI=l-t-01.duckdns.org
       - PUID=1000
       - PGID=1000
       - TZ=America/Argentina/Buenos_Aires
@@ -66,13 +66,13 @@ services:
       - ./downloads:/downloads
       - ./watch:/watch
     restart: unless-stopped
-  duckdns:
-    image: linuxserver/duckdns
-    container_name: duckdns
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - SUBDOMAINS=l-j-01,l-p-01,l-r-01,l-t-01
-      - TOKEN=f52db598-228a-4509-8563-3b2de65d8162
-      - TZ=America/Argentina/Buenos_Aires
-    restart: unless-stopped
+#  duckdns:
+#    image: linuxserver/duckdns
+#    container_name: duckdns
+#    environment:
+#      - PUID=1000
+#      - PGID=1000
+#     - SUBDOMAINS=l-j-01,l-p-01,l-r-01,l-t-01
+#      - TOKEN=f52db598-228a-4509-8563-3b2de65d8162
+#      - TZ=America/Argentina/Buenos_Aires
+#    restart: unless-stopped
